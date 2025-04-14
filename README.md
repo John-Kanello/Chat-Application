@@ -1,6 +1,6 @@
 # 💬 Real-Time Chat Application
 
-A web-based real-time chat application built using **Java (Spring Boot)** and **WebSockets (STOMP)**. Users can register, log in, and communicate via public and private chats. The app features real-time updates, message history, online user tracking, and unread message counters.
+A web-based real-time chat application built using **Java (Spring Boot)** and **WebSockets (STOMP)**. Users can log in, and communicate via public and private chats. The app features real-time updates, message history, online user tracking, and unread message counters.
 
 ---
 
