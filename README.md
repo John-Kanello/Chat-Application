@@ -43,7 +43,7 @@ src/
 
 - **Private Chat**
   - `@MessageMapping("/message/private")`
-  - Sends to `/user/{username}/queue/messages`
+  - Sends to `/user/{username}/queue/messages` and `/user/{username}/queue/container`
 
 ---
 
