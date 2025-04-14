@@ -1,27 +1,26 @@
-💬 Real-Time Chat Application
+# 💬 Real-Time Chat Application
 
-A web-based real-time chat application built using Java (Spring Boot) and WebSockets (STOMP). Users can register, log in, and communicate via public and private chats. The app features real-time updates, message history, online user tracking, and unread message counters.
+A web-based real-time chat application built using **Java (Spring Boot)** and **WebSockets (STOMP)**. Users can register, log in, and communicate via public and private chats. The app features real-time updates, message history, online user tracking, and unread message counters.
 
-🚀 Features
+---
 
-✅ Core Features
+## 🚀 Features
 
-User Authentication: Registration and login functionality.
+### ✅ Core Features
 
-Public Chat: Accessible to all users with message history support.
+- **User Authentication**: Registration and login functionality.
+- **Public Chat**: Accessible to all users with message history support.
+- **Private Messaging**: One-on-one conversations with stored history.
+- **Online User List**: Real-time updates of online users.
+- **Unread Message Indicators**: Shows unread private messages per user.
+- **Chat Switching**: Switch between public and private chats with preserved message history.
+- **Responsive UI**: Clean layout with message container, chat switch, and user list.
 
-Private Messaging: One-on-one conversations with stored history.
+---
 
-Online User List: Real-time updates of online users.
+## 📁 Project Structure
 
-Unread Message Indicators: Shows unread private messages per user.
-
-Chat Switching: Switch between public and private chats with preserved message history.
-
-Responsive UI: Clean layout with message container, chat switch, and user list.
-
-📁 Project Structure
-
+```bash
 src/
 ├── controller/            # Handles WebSocket & REST endpoints
 ├── service/               # Business logic for message and user services
@@ -32,53 +31,51 @@ src/
 ├── config/                # WebSocket configuration
 └── static/
     └── index.html         # Main UI for chat
+```
 
-📡 WebSocket Endpoints
+---
 
-Public Chat
+## 📡 WebSocket Endpoints
 
-@MessageMapping("/message/public")
+- **Public Chat**
+  - `@MessageMapping("/message/public")`
+  - Broadcasts to `/topic/messages`
 
-Broadcasts to /topic/messages
+- **Private Chat**
+  - `@MessageMapping("/message/private")`
+  - Sends to `/user/{username}/queue/messages`
 
-Private Chat
+---
 
-@MessageMapping("/message/private")
+## 💻 Frontend Functionality
 
-Sends to /user/{username}/queue/messages
+- Built using **vanilla JavaScript + HTML/CSS**
+- Uses `stomp.js` and `sockjs-client` for real-time communication.
+- Dynamic DOM manipulation for message rendering and user tracking.
+- Handles private chat history and message separation.
 
-💻 Frontend Functionality
+---
 
-Built using vanilla JavaScript + HTML/CSS
+## 🧪 Example UI Behavior
 
-Uses stomp.js and sockjs-client for real-time communication.
+- ✅ Clicking a username opens a private chat.
+- ✅ Messages are cleared and reloaded when switching chats.
+- ✅ New private messages from other users increment a visible badge.
+- ✅ A public chat button toggles back to global chat.
 
-Dynamic DOM manipulation for message rendering and user tracking.
+---
 
-Handles private chat history and message separation.
+## ⚙️ How to Run
 
-🧪 Example UI Behavior
+### Prerequisites
 
-✅ Clicking a username opens a private chat.
+- Java 21
+- Maven
+- H2 Database (auto-configured)
 
-✅ Messages are cleared and reloaded when switching chats.
+### Steps
 
-✅ New private messages from other users increment a visible badge.
-
-✅ A public chat button toggles back to global chat.
-
-⚙️ How to Run
-
-Prerequisites
-
-Java 21
-
-Maven
-
-H2 Database (auto-configured)
-
-Steps
-
+```bash
 # Clone the repository
 git clone https://github.com/your-repo/chat-app.git
 cd chat-app
@@ -88,37 +85,41 @@ mvn clean install
 
 # Run the application
 mvn spring-boot:run
+```
 
-Then open your browser at http://localhost:8080
+Then open your browser at [http://localhost:8080](http://localhost:8080)
 
-📊 APIs
+---
 
-GET /api/user: Fetches online users.
+## 📊 APIs
 
-GET /api/chat/history: Returns public chat history.
+- `GET /api/user`: Fetches online users.
+- `GET /api/chat/history`: Returns public chat history.
+- `GET /api/chat/private/history?sender=X&receiver=Y`: Returns private chat history between two users.
+- `POST /api/developers/signup`: Registers a new user.
 
-GET /api/chat/private/history?sender=X&receiver=Y: Returns private chat history between two users.
+---
 
-POST /api/developers/signup: Registers a new user.
+## 📌 Tech Stack
 
-📌 Tech Stack
+- Java 21
+- Spring Boot (Web, WebSocket, Data JPA)
+- H2 Database
+- STOMP over SockJS
+- HTML/CSS/JavaScript
 
-Java 21
+---
 
-Spring Boot (Web, WebSocket, Data JPA)
+## 🎯 Possible Enhancements
 
-H2 Database
+- Add authentication and JWT support.
+- Add avatars or profile pictures.
+- Add file sharing or emoji support.
+- Enhance UI with a front-end framework (e.g., React or Vue).
 
-STOMP over SockJS
+---
 
-HTML/CSS/JavaScript
+## 🧑‍💻 Author
 
-🎯 Possible Enhancements
+Made with 💙 by [Your Name]
 
-Add authentication and JWT support.
-
-Add avatars or profile pictures.
-
-Add file sharing or emoji support.
-
-Enhance UI with a front-end framework (e.g., React or Vue).
