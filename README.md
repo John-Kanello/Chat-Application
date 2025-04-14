@@ -69,7 +69,7 @@ src/
 
 ### Prerequisites
 
-- Java 21
+- Java 23
 - Maven
 - H2 Database (auto-configured)
 
@@ -102,24 +102,8 @@ Then open your browser at [http://localhost:8080](http://localhost:8080)
 
 ## 📌 Tech Stack
 
-- Java 21
+- Java 23
 - Spring Boot (Web, WebSocket, Data JPA)
 - H2 Database
 - STOMP over SockJS
 - HTML/CSS/JavaScript
-
----
-
-## 🎯 Possible Enhancements
-
-- Add authentication and JWT support.
-- Add avatars or profile pictures.
-- Add file sharing or emoji support.
-- Enhance UI with a front-end framework (e.g., React or Vue).
-
----
-
-## 🧑‍💻 Author
-
-Made with 💙 by [Your Name]
-
