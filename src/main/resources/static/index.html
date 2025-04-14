@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Chat</h1>
+
+    <div id="username-container">
+        <input type="text" id="input-username" placeholder="Enter your username">
+        <button id="send-username-btn">Join Chat</button>
+    </div>
+
+    <div id="chat-layout" style="display: none;">
+        <div id="users-container">
+            <div id="users" class="scrollable-user-list"></div>
+            <button id="public-chat-btn">Public Chat</button>
+        </div>
+
+        <div id="chat-container">
+            <div id="chat-with">Public chat</div>
+            <div id="messages"></div>
+            <textarea id="input-msg" placeholder="Type your message"></textarea>
+            <button id="send-msg-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="state.js"></script>
+    <script src="display_message.js"></script>
+    <script src="display_online_users.js"></script>
+    <script src="clear_messages.js"></script>
+    <script src="client.js"></script>
+    <script src="display_chat_history.js"></script>
+    <script src="display_private_chat_history.js"></script>
+    <script src="connect_with_user.js"></script>
+    <script src="login.js"></script>
+    <script src="publish_new_user.js"></script>
+    <script src="fetch_users.js"></script>
+</body>
+</html>
