@@ -44,6 +44,13 @@ src/
 - **Private Chat**
   - `@MessageMapping("/message/private")`
   - Sends to `/user/{username}/queue/messages` and `/user/{username}/queue/container`
+ 
+- **User Joining/Leaving**
+  - `@MessageMapping("/user/new")`
+  - Sends to `/topic/user/{username}/new` for each user in the application
+ 
+  - Session Disconnect Event
+  - Sends to `/topic/user/{username}/leave` for each user in the application
 
 ---
 
@@ -87,17 +94,15 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-Then open your browser at [http://localhost:8080](http://localhost:8080)
-
----
-
 ## 📊 APIs
 
 - `GET /api/user`: Fetches online users.
 - `GET /api/chat/history`: Returns public chat history.
 - `GET /api/chat/private/history?sender=X&receiver=Y`: Returns private chat history between two users.
-- `POST /api/developers/signup`: Registers a new user.
-
+- `GET /api/container/all?username=X`: Returns the online-user container for a particular user.
+- `PUT /api/container/reset?currentUser=X&userToConnectWith=Y`: Resets the unread message count of current user to for user to connect with.
+- `PUT /api/container/reset?currentUser=X&userToConnectWith=Y`: Sets the connected chat for the current user to userToConnectWith.
+  
 ---
 
 ## 📌 Tech Stack
