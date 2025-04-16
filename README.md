@@ -8,7 +8,6 @@ A web-based real-time chat application built using **Java (Spring Boot)** and **
 
 ### ✅ Core Features
 
-- **User Authentication**: Registration and login functionality.
 - **Public Chat**: Accessible to all users with message history support.
 - **Private Messaging**: One-on-one conversations with stored history.
 - **Online User List**: Real-time updates of online users.
@@ -21,19 +20,6 @@ A web-based real-time chat application built using **Java (Spring Boot)** and **
 ## 📁 Project Structure
 
 ```bash
-src/
-├── controller/            # Handles WebSocket & REST endpoints
-├── service/               # Business logic for message and user services
-├── dto/                   # Data Transfer Objects
-├── mapper/                # Mappers for DTO ↔ Entity
-├── entity/                # JPA entities for storing data
-├── repository/            # Spring Data JPA repositories
-├── config/                # WebSocket configuration
-└── static/
-    └── index.html         # Main UI for chat
-```
-
----
 
 ## 📡 WebSocket Endpoints
 
