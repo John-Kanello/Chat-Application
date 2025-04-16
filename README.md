@@ -83,7 +83,7 @@ mvn spring-boot:run
 - `GET /api/chat/private/history?sender=X&receiver=Y`: Returns private chat history between two users.
 - `GET /api/container/all?username=X`: Returns the online-user container for a particular user.
 - `PUT /api/container/reset?currentUser=X&userToConnectWith=Y`: Resets the unread message count of current user to for user to connect with.
-- `PUT /api/container/reset?currentUser=X&userToConnectWith=Y`: Sets the connected chat for the current user to userToConnectWith.
+- `PUT /api/container/connect?currentUser=X&userToConnectWith=Y`: Sets the connected chat for the current user to userToConnectWith.
   
 ---
 
