@@ -6,8 +6,6 @@ A web-based real-time chat application built using **Java (Spring Boot)** and **
 
 ## 🚀 Features
 
-### ✅ Core Features
-
 - **Public Chat**: Accessible to all users with message history support.
 - **Private Messaging**: One-on-one conversations with stored history.
 - **Online User List**: Real-time updates of online users.
