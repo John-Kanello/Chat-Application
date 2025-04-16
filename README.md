@@ -17,8 +17,6 @@ A web-based real-time chat application built using **Java (Spring Boot)** and **
 
 ---
 
-## 📁 Project Structure
-
 ```bash
 
 ## 📡 WebSocket Endpoints
